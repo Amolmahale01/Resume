@@ -1,6 +1,6 @@
 # Amol Mahale
 
-![Amol Mahale]()  
+![Amol Mahale](https://github.com/Amolmahale01/Resume/blob/main/linkdin_wallpaper-removebg-preview.png)  
 
 Email: [amolm01rcpit@gmail.com](mailto:amolm01rcpit@gmail.com) | Phone: +91-9579842665  
 LinkedIn: [linkedin.com/in/amol-mahale-9aa796215](https://www.linkedin.com/in/amol-mahale-9aa796215) | GitHub: [github.com/Amolmahale01](https://github.com/Amolmahale01)
