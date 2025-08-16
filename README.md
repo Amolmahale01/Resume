@@ -5,47 +5,55 @@
 Email: [amolm01rcpit@gmail.com](mailto:amolm01rcpit@gmail.com) | Phone: +91-9579842665  
 LinkedIn: [linkedin.com/in/amol-mahale-9aa796215](https://www.linkedin.com/in/amol-mahale-9aa796215) | GitHub: [github.com/Amolmahale01](https://github.com/Amolmahale01)
 
-## Career Objective
-To be associated with an organization that provides career development opportunities as a Software Developer and an environment to enable me to contribute to its growth.
+<!-- Profile README for Amol Mahale -->
 
-## Technical Skills
-- **Programming Languages:** Python, Java, HTML
-- **Database:** MS-SQL Server 2012
-- **Web Development:** Proficient
-- **Cloud Platforms:** AWS, GCP
-- **Additional Skills:** OOPS, DBMS, Power BI, Tableau
-- **Development Tool:** VS-Code 2022 version 1.73
+<h1 align="center">Hi, I'm Amol Mahale 👋</h1>
+<p align="center">
+  ERPNext Developer • Python • Frappe • React • SQL
+</p>
 
-## Achievements
-- Google Cloud Ready Facilitator Program
+<p align="center">
+  <a href="mailto:amolm01rcpit@gmail.com"><img alt="Email" src="https://img.shields.io/badge/Email-amolm01rcpit%40gmail.com-informational"></a>
+  <a href="https://www.linkedin.com/in/amol-mahale-9aa796215"><img alt="LinkedIn" src="https://img.shields.io/badge/LinkedIn-Amol%20Mahale-blue"></a>
+  <a href="https://github.com/Amolmahale01"><img alt="GitHub" src="https://img.shields.io/badge/GitHub-Amolmahale01-black"></a>
+  <a href="https://amolmahaleportfolio.netlify.app/"><img alt="Portfolio" src="https://img.shields.io/badge/Portfolio-Visit-success"></a>
+</p>
 
-## Academic Details
-- **B.Tech in Data Science** - 7.09 (Semester VIII)  
-  R. C. Patel Institute of Technology, Shirpur
-- **HSC** - 64.46%  
-  G S Vidya Mandir Vadali Tal Shahada Dist Nandurbar
-- **SSC** - 78.20%  
-  Sau. Mangalatai Ramesh Sonwane Madhyamic Vidhyalay Kakarde Digar Tal Shahada Dist Nandurbar
+---
 
-## Professional Profiles
-- LinkedIn: [linkedin.com/in/amol-mahale-9aa796215](https://www.linkedin.com/in/amol-mahale-9aa796215)
-- GitHub: [github.com/Amolmahale01](https://github.com/Amolmahale01)
+## 🚀 About Me
+- **ERPNext Developer @ CBD IT Solutions** (≈1 year)
+- I build and customize ERPNext using **Frappe Framework (Python, JS)** to automate Accounting, Manufacturing, CRM, Stock & Helpdesk.
+- Love turning business logic into **clean scripts, reports, print formats, and dashboards** (Frappe Insights).
 
-## Projects
-- **Student Result Management System** [Python | SQL Database]  
-  A Python-based system that automates result recording and reporting for educational institutions, enhancing efficiency and transparency.
-  
-- **Quiz Application using Java** [Java | SQL Database]  
-  A Java-based quiz application featuring a user-friendly interface, multiple-choice questions, scoring, and feedback for interactive learning.
-  
-- **Parkinson’s Disease Detection** [Python]  
-  An AI-based system for early detection of Parkinson’s disease using speech and movement analysis, improving diagnosis and treatment outcomes.
+---
 
-## Internship
-- E-Cell IIT Bombay Campus Ambassador
+## 🧰 Tech Stack
+**Languages:** Python, JavaScript, SQL, HTML, CSS  
+**Frontend:** React, Next.js, React Query  
+**Backend:** Frappe Framework, Django, REST APIs  
+**ERP:** ERPNext (DocType, Client/Server Script, Custom App, Print Format, Reports, Insights)  
+**DB:** MySQL, PostgreSQL, MS SQL Server  
+**Tools:** GitHub, VS Code, Postman, Cursor
 
-## Certifications
-- Data Science Foundations - Great Learning
-- Create a Virtual Classroom using Google Slides - Coursera
-- Statistical Data Visualization - IBM
-- Aptitude and Technical Training Program - Campus Credentials
+---
+
+## 🏗️ ERPNext / Frappe Highlights
+- Built **client & server scripts**, **custom apps**, **REST integrations**
+- Designed **GST/TDS reports**, **Aging & Reconciliation**, **Manufacturing BOM/WO flows**
+- **Print Formats** (A4 PDFs, conditional GST sections, barcodes)
+- **Frappe Insights** dashboards: TAT, stock, sales, production KPIs
+
+```py
+# Server Script example (Python)
+import frappe
+
+@frappe.whitelist()
+def check_rm_availability(work_order):
+    wo = frappe.get_doc("Work Order", work_order)
+    shortages = []
+    for d in wo.required_items:
+        qty = frappe.db.get_value("Bin", {"item_code": d.item_code, "warehouse": d.source_warehouse}, "actual_qty") or 0
+        if qty < d.required_qty:
+            shortages.append(f"{d.item_code}: need {d.required_qty}, have {qty}")
+    return "All good ✅" if not shortages else "Shortages:\n" + "\n".join(shortages)
